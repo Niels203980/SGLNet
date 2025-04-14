@@ -4,9 +4,9 @@ Ground Truth (GT) labels in this directory adhere to the following:
 **Subtype:** S1A and S1B  
 **Beam mode:** Interferometric Wide (IW)  
 **Flight direction:** Ascending  
-**Start Path:** 10  
-**End Path:** 10  
-**Start Frame:** 939  
-**End Frame:** 944  
-**Start Date:** 7/22/2017  
-**End Date:** 9/8/2017
+**Start Path:** 65  
+**End Path:** 65  
+**Start Frame:** 901  
+**End Frame:** 906  
+**Start Date:** 4/1/2018  
+**End Date:** 8/12/2021
