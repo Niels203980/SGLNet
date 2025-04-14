@@ -8,3 +8,5 @@ Ground Truth (GT) labels in this directory adhere to the following:
 **End Path:** 10  
 **Start Frame:** 939  
 **End Frame:** 944  
+**Start Date:** 7/22/2017  
+**End Date:** 9/8/2017
