@@ -8,21 +8,21 @@ Automatic detection of subglacial hydrological activity (subglacial lakes, SGL) 
 
 ### SGLNet Package and executable scripts for Python
 **Main script for inference and prediction**
-```python
+```
 event_tracking_iff_DINO.py
 ```
 **Script for ***experimental*** segmentation**
-```python
+```
 semantic_segmentation.py
 ```
 **Scripts for training and validation**
-```python
+```
 image2trainset.py
 train_classifier_head.py
 test_network.py
 ```
 **Scripts for testing against ground truth**
-```python
+```
 compute_classification_performance.py
 compute_coherence.py
 compute_lake_count.py
