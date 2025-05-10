@@ -5,3 +5,27 @@ Automatic detection of subglacial hydrological activity (subglacial lakes, SGL) 
 <div align="center">
   <img width="100%" alt="Model output illustration" src=".github/pine_island21-01.png">
 </div>
+
+### SGLNet Package and executable scripts for Python
+**Main script for inference and prediction**
+```python
+event_tracking_iff_DINO.py
+```
+**Script for ***experimental*** segmentation**
+```python
+semantic_segmentation.py
+```
+**Scripts for training and validation**
+```python
+image2trainset.py
+train_classifier_head.py
+test_network.py
+```
+**Scripts for testing against ground truth**
+```python
+compute_classification_performance.py
+compute_coherence.py
+compute_lake_count.py
+compute_segmentation_overlap.py
+compute_segmentation_performance.py
+```
