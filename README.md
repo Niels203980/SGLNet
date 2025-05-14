@@ -42,7 +42,7 @@ All executable scripts above use the SGLNet package shown in the schematic below
 </div>
 
 Scripts and weights* in the `dino` sub-package(s) are from the [[`DINO repository`](https://github.com/facebookresearch/dino/tree/main)] while scripts in the `lost` sub-package are from the [[`LOST repository`](https://github.com/valeoai/LOST)].<br>
-**(*)** The SGLNet/Weights/dino currently does not come with the DINO weights due to file size limitations. These can be downloaded from the DINO repository. To do so, choose the <ins>backbone only</ins> for the four architectures shown in the image below, and place in the `SGLNet/Weights/dino` directory as shown in the image. Make sure the names are as shown.
+**(*)** The SGLNet/Weights/dino currently does not come with the DINO weights due to file size limitations. These can be downloaded from the DINO repository. To do so, choose the <ins>backbone only</ins> option for the four architectures shown in the image below, and place in the `SGLNet/Weights/dino` directory as shown in the image. Make sure the names are as shown.
 <div align="center">
   <img width="70%" alt="Weights from DINO repository" src=".github/weights.png">
 </div>
