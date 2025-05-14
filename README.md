@@ -61,19 +61,36 @@ The images at the very top of this page were created using `*_pred.pkl` and `*_b
 
 ### Outputs
 Here follows a short description of the  output files from the various scripts
+
 **From `event_tracking_iff_DINO.py`**
-- `[prodname]_meta.json`:  
-- `[prodname]_pred.pkl`:   (np.int32, (N,))
-- `[prodname]_embed.pkl`:  [
-                              ('id', int32),
-                              ('bbox', (int32, 4)),
-                              ('cls_embed', (float32, embed_dim)),
-                              ('patch_embed', (float32, (num_patches, embed_dim))),
-                              ('output_embed', (float32, (num_patches, output_dim))),
-                              ('qkv', (float32, (3, num_heads, num_tokens, head_dim))),
-                              ('attn', (float32, (num_heads, num_tokens, num_tokens)))
-                            ]
-- `[prodname]_bbox.pkl`:   (int32, (N, 4))
+in iff_eventCoords
+- `[prodname].txt`: txt file with large boundary boxes covering entire regions of interest, compatible with the existing ipp pipeline
+in iff_eventTracking
+- `[prodname]_meta.json`: json file with dictionary containing inference metadata
+- `[prodname]_pred.pkl`: numpy pickle file with (N,)-array of predictions (1 = True, 0 = False, -1 = Excluded)
+- `[prodname]_embed.pkl`: numpy pickle file with structured array of cls-, patch-, qkv-, and self-attention-embeddings for locations where SGL are predicted
+- `[prodname]_bbox.pkl`: numpy pickle file with (N, 4)-array of boundary boxes corresponding to each chunk passes through the ViT
+- `[prodname]_img.png`: png image showing the (padded) boundary bboxes plotted onto the iff_dd phase image (for visualization only)
+
+**From `semantic_segmentation.py`**
+- `[prodname]_binaryMask.png`: segmentation mask as png image
+- `[prodname]_outlines.pkl`: countains array of (200, 2)-arrays with are (x,y) coordinates of smoothed polygons surrounding segmentations.
+
+#### Ground truth testing
+**From `compute_lake_count.py`**
+- `[prodname]_lakeCount.json`: json file with number of captured lakes from groundtruth test
+
+**From `compute_confusion_matrix.py`**
+- `[prodname]_confMatx.json`: json file with confusion matrix component from groundtruth test
+
+**From `compute_segmentation_overlap.py`**
+- `[prodname]_segStats.json`: json file with segmentation performance from groundtruth test
+
+**From `compute_segmentation_overlap.py`**
+- `[prodname]_segStats.json`: json file with segmentation performance from groundtruth test
+
+**From `compute_coherence.py`**
+- `[prodname]_coroStats.pkl`: numpy pickle file with structured array containing coherence of individual bboxes from groundtruth test
 
 ## Running detection script
 The `event_tracking_iff_DINO.py` script is used to detect SGL and extract event coordinates (padded boundary boxes) of regions of interest.
