@@ -62,9 +62,9 @@ The images at the very top of this page were created using `*_pred.pkl` and `*_b
 ### Outputs
 Here follows a short description of the  output files from the various scripts
 
-**From `event_tracking_iff_DINO.py`**
+**From `event_tracking_iff_DINO.py`**<br>
 in iff_eventCoords
-- `[prodname].txt`: txt file with large boundary boxes covering entire regions of interest, compatible with the existing ipp pipeline
+- `[prodname].txt`: txt file with large boundary boxes covering entire regions of interest, compatible with the existing ipp pipeline<br>
 in iff_eventTracking
 - `[prodname]_meta.json`: json file with dictionary containing inference metadata
 - `[prodname]_pred.pkl`: numpy pickle file with (N,)-array of predictions (1 = True, 0 = False, -1 = Excluded)
