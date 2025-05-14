@@ -59,6 +59,22 @@ Files colored in ${\textsf{\color{lightblue}blue}}$ are the **main** ouput(s), b
 
 The images at the very top of this page were created using `*_pred.pkl` and `*_bbox.pkl` files, to visualize ViT-windows (aka bboxes) where the model predicts features of interest. The three different views are the outputs of three different DINO configurations.
 
+### Outputs
+Here follows a short description of the  output files from the various scripts
+**From `event_tracking_iff_DINO.py`**
+- `[prodname]_meta.json`:  
+- `[prodname]_pred.pkl`:   (np.int32, (N,))
+- `[prodname]_embed.pkl`:  [
+                              ('id', int32),
+                              ('bbox', (int32, 4)),
+                              ('cls_embed', (float32, embed_dim)),
+                              ('patch_embed', (float32, (num_patches, embed_dim))),
+                              ('output_embed', (float32, (num_patches, output_dim))),
+                              ('qkv', (float32, (3, num_heads, num_tokens, head_dim))),
+                              ('attn', (float32, (num_heads, num_tokens, num_tokens)))
+                            ]
+- `[prodname]_bbox.pkl`:   (int32, (N, 4))
+
 ## Running detection script
 The `event_tracking_iff_DINO.py` script is used to detect SGL and extract event coordinates (padded boundary boxes) of regions of interest.
 In it's simplest form, this script is executed as
