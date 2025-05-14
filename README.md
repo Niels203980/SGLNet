@@ -62,10 +62,8 @@ The images at the very top of this page were created using `*_pred.pkl` and `*_b
 ### Outputs
 Here follows a short description of the  output files from the various scripts
 
-**From `event_tracking_iff_DINO.py`**<br>
-in iff_eventCoords
-- `[prodname].txt`: txt file with large boundary boxes covering entire regions of interest, compatible with the existing ipp pipeline<br>
-in iff_eventTracking
+**From `event_tracking_iff_DINO.py`**
+- `[prodname].txt`: txt file with large boundary boxes covering entire regions of interest, compatible with the existing ipp pipeline
 - `[prodname]_meta.json`: json file with dictionary containing inference metadata
 - `[prodname]_pred.pkl`: numpy pickle file with (N,)-array of predictions (1 = True, 0 = False, -1 = Excluded)
 - `[prodname]_embed.pkl`: numpy pickle file with structured array of cls-, patch-, qkv-, and self-attention-embeddings for locations where SGL are predicted
